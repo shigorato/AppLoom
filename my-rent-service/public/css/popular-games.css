@@ -1,0 +1,103 @@
+.popular-games {
+    margin-bottom: 15px;
+}
+/* Контейнер для карточек */
+.card-container {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали (опционально) */
+    padding: 10px;
+    gap: 20px; /* Отступы между карточками */
+    flex-wrap: wrap; /* Увеличиваем адаптивность */
+  }
+
+  .title-popular-games {
+    display: flex;
+    justify-content: center;
+    margin:60px 80px;
+  }
+
+  .title-popular-games h2 {
+    font-size: 2.5rem;
+  }
+  
+  /* Карточка */
+  .card {
+    position: relative;
+    width: 250px; /* Ширина карточки */
+    height: 450px !important; /* Высота карточки */
+    border-radius: 30px !important; /* Скругленные углы */
+    overflow: hidden; /* Обрезаем содержимое за пределами */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Изображение внутри карточки */
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняем пропорции и заполняем карточку */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Кнопка внизу карточки */
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    text-align: center; /* Центрируем кнопку */
+  }
+  
+  /* Кнопка */
+  .card-overlay .btn {
+    width: 80%; /* Кнопка занимает 80% ширины карточки */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Зеленый цвет */
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-overlay .btn:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+  }
+  
+  /* Эффект при наведении на карточку */
+  .card:hover {
+    transform: scale(1.05); /* Увеличиваем карточку */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Усиливаем тень */
+  }
+  
+  .card:hover .card-img {
+    transform: scale(1.1); /* Увеличиваем изображение */
+  }
+
+  /* Карусель игр */
+
+  #carouselExample {
+    width: 90%; /* Уменьшение ширины */
+    max-width: 1000px; /* Максимальная ширина */
+    border-radius: 20px; /* Закругленные углы */
+    overflow: hidden; /* Скрытие частей за границей */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Эстетичная тень */
+  }
+  
+  .carousel-inner img {
+    height: 500px;
+    border-radius: 15px; /* Закругляем и внутренние изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон текста */
+    border-radius: 5px; /* Закругленные углы для фона текста */
+    padding: 10px;
+  }
+  
+  
+  

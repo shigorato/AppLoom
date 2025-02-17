@@ -1,0 +1,222 @@
+/* Общий контейнер */
+.container {
+    display: flex;
+    gap: 10px; /* Промежуток между колонками */
+    margin: 20px;
+    flex-wrap: wrap; /* Добавлено для гибкости */
+}
+
+/* Заголовок */
+.game-title {
+    width: 100%; /* Ширина заголовка */
+    margin-bottom: 20px; /* Расстояние между заголовком и колонками */
+    margin-top: 0; /* Убираем отступ сверху */
+    text-align: center; /* Центрируем заголовок */
+}
+
+/* Левая колонка с жанрами */
+.genre-column {
+    width: 25%; /* Ширина левой колонки */
+    background-color: #f4f4f4; /* Лёгкий фон */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Эстетичная тень */
+    height: auto; /* Высота колонки зависит от её содержимого */
+    display: flex;
+    flex-direction: column;
+}
+
+.genre-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.genre-list {
+    list-style: none;
+    padding: 0;
+}
+
+.genre-list li {
+    margin-bottom: 30px;
+}
+
+.genre-list li a {
+    text-decoration: none;
+    color: #000000; /* Синий цвет ссылок */
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.genre-list li a:hover {
+    color: #0056b3; /* Темнее при наведении */
+}
+
+/* Правая колонка с играми */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px)); /* Адаптивная сетка */
+    width: 50%;
+    height: 40%;
+    gap: 10px;
+    flex-grow: 1; /* Растяжение правой части */
+    align-items: start; /* Выравнивание элементов по верхнему краю */
+}
+
+/* Карточки игр */
+.game-card {
+    text-align: center;
+    border: 1px solid #ddd; /* Лёгкая граница */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Обеспечивает, чтобы контент был в верхней части */ /* Убираем фиксированную высоту */
+}
+
+/* Эффект при наведении */
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    overflow: hidden; /* Скрыть переполнение */
+    text-overflow: ellipsis; /* Многоточие при переполнении */
+    white-space: nowrap; /* Запретить перенос текста */
+}
+
+.game-card p {
+    color: #555555; /* Серый цвет для рейтинга */
+    font-size: 0.9em;
+    overflow: hidden; /* Скрыть переполнение */
+    text-overflow: ellipsis; /* Многоточие при переполнении */
+    white-space: nowrap; /* Запретить перенос текста */
+}
+
+/* Пагинация */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Расстояние от карточек */
+    width: 100%;
+    margin-bottom: 20px; /* Паддинг для разделения с нижним контентом */
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.page-item {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.page-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.page-link span {
+    color:#000000;
+}
+
+.page-item a {
+    color:#000000;
+}
+
+.page-item a:hover {
+    color:#928f8f;
+}
+
+/* Звезды */
+.stars {
+    display: inline-flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc; /* Цвет неактивных звезд */
+    position: relative;
+    overflow: hidden;
+    transition: color 0.2s ease-in-out; /* Плавный переход цвета при наведении */
+}
+
+.star::before {
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    color: #ffcc00; /* Цвет активных звезд */
+    overflow: hidden;
+    transition: width 0.2s ease-in-out; /* Плавный переход ширины */
+    white-space: nowrap;
+    z-index: 1; /* Чтобы псевдоэлемент был поверх основного символа */
+}
+
+.star:hover {
+    color: #ffb300; /* Более яркий оттенок при наведении */
+}
+
+.star:hover::before {
+    width: 100%; /* Заливка при наведении */
+}
+
+.star.active::before {
+    width: 100%; /* Заливка для активных звезд */
+}
+
+.stars .star:active {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
+
+/* Кнопки удаления и восстановления */
+.remove-button {
+    position: absolute;
+    align-items:center;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.restore-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
