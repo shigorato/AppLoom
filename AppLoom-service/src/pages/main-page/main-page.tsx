@@ -1,6 +1,6 @@
 import { JSX } from "react";
-import Header from "../components/header/header";
-import PopularGame from "../components/app/popular-game/popular-game";
+import Header from "../../components/header/header";
+import PopularGame from "../../components/app/popular-game/popular-game";
 
 function MainPage(): JSX.Element {
   return (

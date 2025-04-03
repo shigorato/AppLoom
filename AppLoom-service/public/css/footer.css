@@ -1,0 +1,180 @@
+/* Общий стиль футера */
+.footer {
+  background-color: #333; /* Темный фон */
+  color: white;
+  padding: 50px 0;
+  font-size: 1rem;
+  width: 100%; /* Убедимся, что футер растягивается на всю ширину */
+  box-sizing: border-box;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Для адаптивности, чтобы элементы не выходили за пределы */
+}
+
+.footer-left, .footer-links, .footer-contact, .footer-developers, .footer-categories {
+  flex: 1;
+  min-width: 250px; /* Устанавливаем минимальную ширину для колонок */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+.footer-left h3,
+.footer-links h4,
+.footer-contact h4,
+.footer-developers h4,
+.footer-categories h4 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center; /* Выравнивание заголовков по центру */
+}
+
+.footer-left p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center; /* Выравнивание параграфов по центру */
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Выравнивание социальных иконок по центру */
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.8em;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Синий цвет при наведении */
+}
+
+.footer-links ul,
+.footer-contact ul,
+.footer-developers ul,
+.footer-categories ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Выравнивание списков по центру */
+}
+
+.footer-links ul li,
+.footer-contact ul li,
+.footer-developers ul li,
+.footer-categories ul li {
+  margin-bottom: 10px;
+  text-align: center; /* Выравнивание элементов списка по центру */
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-developers a,
+.footer-categories a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  transition: color 0.3s;
+  display: block; /* Для корректной работы text-align */
+  width: 100%; /* Занимает всю ширину родительского блока */
+  text-align: center; /* Выравнивание ссылок по центру */
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-developers a:hover,
+.footer-categories a:hover {
+  color: #007bff; /* Синий цвет при наведении */
+}
+
+/* Стили для нижней части футера */
+.footer-bottom-info {
+  width: 100%; /* Растягиваем на всю ширину экрана */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  font-size: 0.9rem; /* Размер шрифта для нижней информации */
+  color: white;
+}
+
+.footer-bottom-info p {
+  margin: 0;
+}
+
+/* Стили для списка в нижней части футера */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center; /* Выравнивание нижней части по центру */
+}
+
+.footer-bottom h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Выравнивание списка по центру */
+}
+
+.footer-bottom ul li {
+  margin-bottom: 10px;
+  text-align: center; /* Выравнивание элементов списка по центру */
+}
+
+.footer-bottom ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  transition: color 0.3s;
+  display: block; /* Для корректной работы text-align */
+  width: 100%; /* Занимает всю ширину родительского блока */
+  text-align: center; /* Выравнивание ссылок по центру */
+}
+
+.footer-bottom ul a:hover {
+  color: #007bff; /* Синий цвет при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .footer .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-left, .footer-links, .footer-contact, .footer-developers, .footer-categories {
+      margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+      margin-top: 40px;
+  }
+
+  .footer-left h3 {
+      font-size: 1.8em;
+  }
+
+  .footer-left p {
+      font-size: 1.1em;
+  }
+
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-developers h4,
+  .footer-categories h4 {
+      font-size: 1.3em;
+  }
+
+  .footer-bottom-info {
+      font-size: 0.9rem;
+  }
+}

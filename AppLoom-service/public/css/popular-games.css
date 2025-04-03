@@ -14,8 +14,9 @@
 
   .title-popular-games {
     display: flex;
+    color:rgb(0, 0, 0);
     justify-content: center;
-    margin:60px 80px;
+    padding:60px 80px;
   }
 
   .title-popular-games h2 {

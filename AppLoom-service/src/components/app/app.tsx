@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import MainPage from "../../pages/main-page";
+import MainPage from "../../pages/main-page/main-page";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 

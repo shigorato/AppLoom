@@ -15,6 +15,7 @@
 }
 
 /* Левая колонка с жанрами */
+/* Левая колонка с жанрами */
 .genre-column {
     width: 25%; /* Ширина левой колонки */
     background-color: #f4f4f4; /* Лёгкий фон */
@@ -26,9 +27,37 @@
     flex-direction: column;
 }
 
+/* Для заголовка внутри genre-column */
 .genre-column h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Запрет переноса текста */
+}
+
+/* Для списка жанров */
+.genre-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.genre-list li {
+    margin-bottom: 30px;
+}
+
+/* Для ссылок внутри списка жанров */
+.genre-list li a {
+    text-decoration: none;
+    color: #000000; /* Синий цвет ссылок */
+    font-size: 1.1em;
+    transition: color 0.3s;
+    overflow: hidden; /* Скрыть переполнение */
+    text-overflow: ellipsis; /* Многоточие при переполнении */
+    white-space: nowrap; /* Запретить перенос текста */
+    display: block; /* Для корректной работы text-overflow */
+    max-width: 100%; /* Ограничить ширину ссылки */
 }
 
 .genre-list {

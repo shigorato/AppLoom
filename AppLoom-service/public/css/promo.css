@@ -1,0 +1,44 @@
+.promo {
+    width:100%;
+    background-image: url('/img/Serene-Night-Landscape-With-Moon-and-Stars-in-Green-Tones.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    position: relative;
+    z-index: 0;
+    color: white;
+    text-align: center; /* Центрирование текста */
+}
+/* Стили для promo-content */
+.promo-content {
+    max-width: 600px; /* Ограничиваем ширину контента */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для выделения текста */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+}
+.promo-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.promo-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: #ffd700; /* Золотистый цвет */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.promo-content button:hover {
+    background-color: #e6b800; /* Тёмно-золотистый при наведении */
+}
